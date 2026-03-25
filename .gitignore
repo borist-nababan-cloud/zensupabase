@@ -26,3 +26,4 @@ Thumbs.db
 
 # SQL files
 docs/public.sql
+docs/rls.json
