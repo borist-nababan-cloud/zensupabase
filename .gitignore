@@ -27,3 +27,8 @@ Thumbs.db
 # SQL files
 docs/public.sql
 docs/rls.json
+docs/old_data.sql
+docs/old_schema.sql
+docs/current_data.sql
+docs/manual_import_guide.md
+docs/Supabase Snippet SQL Query-*.csv
