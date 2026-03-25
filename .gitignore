@@ -23,3 +23,6 @@ Thumbs.db
 
 # Claude
 .claude/
+
+# SQL files
+docs/public.sql
