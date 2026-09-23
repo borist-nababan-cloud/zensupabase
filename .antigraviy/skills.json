@@ -1,0 +1,16 @@
+{
+  "project_name": "Karunia Motor Ecosystem",
+  "workspace_root": "D:/BEN/KMR/_New Source/WEBAPPS",
+  "architecture": {
+    "backend": "supabase",
+    "frontend_framework": "react",
+    "mobile_framework": "react-native",
+    "orchestrator": "coolify"
+  },
+  "directories": {
+    "backend": "backend/",
+    "dashboard": "frontend/react-dashboard/",
+    "sales_app": "frontend/SalesApp/",
+    "website": "website/"
+  }
+}

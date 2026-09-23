@@ -32,3 +32,10 @@ docs/old_schema.sql
 docs/current_data.sql
 docs/manual_import_guide.md
 docs/Supabase Snippet SQL Query-*.csv
+
+# Added by Agent for safety
+.env
+*.sql
+*.md
+!README.md
+docs/
