@@ -39,3 +39,15 @@ docs/Supabase Snippet SQL Query-*.csv
 *.md
 !README.md
 docs/
+
+*.env
+.env
+*.sql
+docs/
+
+
+*.env
+.env
+*.sql
+docs/
+
