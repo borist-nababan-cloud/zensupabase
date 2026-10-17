@@ -46,8 +46,6 @@ docs/
 docs/
 
 
-*.env
-.env
-*.sql
-docs/
+# Migrations must be tracked
+!supabase/migrations/*.sql
 
