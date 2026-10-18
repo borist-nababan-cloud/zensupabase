@@ -5,6 +5,10 @@ package-lock.json
 # Supabase
 supabase/.branches/
 supabase/.temp/
+.branches/
+.temp/
+*.bak
+
 
 # Environment
 .env
