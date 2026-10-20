@@ -8,6 +8,7 @@ supabase/.temp/
 .branches/
 .temp/
 *.bak
+backups/
 
 
 # Environment
