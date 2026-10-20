@@ -9,6 +9,8 @@ supabase/.temp/
 .temp/
 *.bak
 backups/
+.antigraviy/
+.antigravity/
 
 
 # Environment
