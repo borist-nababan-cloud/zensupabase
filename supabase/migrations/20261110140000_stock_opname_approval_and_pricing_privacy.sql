@@ -4,6 +4,17 @@
 --    If item belongs to another outlet (e.g. STO), load sell_price as buy_price and sell_price.
 -- 2. Updates view_report_opname_variance to apply privacy pricing rule for unit_cost and variance_value.
 -- 3. Adds approve_stock_opname and reject_stock_opname RPC functions for Role 5, 8, 14 approval flow.
+-- 4. Updates stock_opname_headers_status_check to support PENDING_APPROVAL and REJECTED statuses.
+
+-- ==============================================================================
+-- 0. UPDATE stock_opname_headers status check constraint
+-- ==============================================================================
+ALTER TABLE public.stock_opname_headers 
+DROP CONSTRAINT IF EXISTS stock_opname_headers_status_check;
+
+ALTER TABLE public.stock_opname_headers 
+ADD CONSTRAINT stock_opname_headers_status_check 
+CHECK (status = ANY (ARRAY['DRAFT'::text, 'PENDING_APPROVAL'::text, 'COMPLETED'::text, 'REJECTED'::text]));
 
 -- ==============================================================================
 -- 1. UPDATE view_inventory_report

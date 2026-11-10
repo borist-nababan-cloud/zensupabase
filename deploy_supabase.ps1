@@ -34,7 +34,7 @@ if (Test-Path $localBin) {
 if ($env -eq 'local') {
     Write-Host "Pushing to Local Supabase..."
     $localDbUrl = "postgresql://postgres:postgres@127.0.0.1:54322/postgres"
-    & $supabaseCmd @prefixArgs db push --db-url $localDbUrl --workdir $PSScriptRoot
+    & $supabaseCmd @prefixArgs db push --include-all --db-url $localDbUrl --workdir $PSScriptRoot
 }
 elseif ($env -eq 'staging') {
     $dbUrl = [System.Environment]::GetEnvironmentVariable('SUPABASE_DB_URL_STAGING')
@@ -44,7 +44,7 @@ elseif ($env -eq 'staging') {
     }
     
     Write-Host "Pushing to Staging Supabase Cloud..."
-    & $supabaseCmd @prefixArgs db push --db-url $dbUrl --workdir $PSScriptRoot
+    & $supabaseCmd @prefixArgs db push --include-all --db-url $dbUrl --workdir $PSScriptRoot
 }
 elseif ($env -eq 'production') {
     $dbUrl = [System.Environment]::GetEnvironmentVariable('SUPABASE_DB_URL_PROD')
@@ -54,7 +54,7 @@ elseif ($env -eq 'production') {
     }
     
     Write-Host "Pushing to Production Supabase Cloud..."
-    & $supabaseCmd @prefixArgs db push --db-url $dbUrl --workdir $PSScriptRoot
+    & $supabaseCmd @prefixArgs db push --include-all --db-url $dbUrl --workdir $PSScriptRoot
 }
 
 if ($LASTEXITCODE -eq 0) {

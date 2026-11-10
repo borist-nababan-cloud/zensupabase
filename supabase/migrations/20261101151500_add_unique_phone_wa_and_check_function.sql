@@ -111,3 +111,4 @@ CREATE TRIGGER trg_prevent_duplicate_member_phone_wa
 BEFORE INSERT OR UPDATE OF phone_wa ON public.web_members
 FOR EACH ROW
 EXECUTE FUNCTION public.trg_fn_prevent_duplicate_member_phone_wa();
+
