@@ -55,4 +55,6 @@ docs/
 
 # Migrations must be tracked
 !supabase/migrations/*.sql
+__pycache__/
+**/__pycache__/
 
